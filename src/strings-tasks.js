@@ -73,7 +73,7 @@ function concatenateStrings(value1, value2) {
  */
 function getFirstChar(value) {
   // throw new Error('Not implemented');
-  return value[0];
+  return value.charAt(0);
 }
 
 /**
