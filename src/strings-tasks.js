@@ -180,8 +180,17 @@ function removeFirstOccurrences(str, value) {
  *   removeLastOccurrences('I like legends', 'end') => 'I like legs'.
  *   removeLastOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
-function removeLastOccurrences(/* str, value */) {
-  throw new Error('Not implemented');
+/* prettier-ignore */
+function removeLastOccurrences(str, value) {
+  // throw new Error('Not implemented');
+  let ans
+  if (!(str.includes(value))) {
+    ans = str
+  } else {
+    ans = str.slice(0, str.lastIndexOf(value)) +
+      str.slice(str.lastIndexOf(value) + value.length);
+  }
+  return ans
 }
 
 /**
