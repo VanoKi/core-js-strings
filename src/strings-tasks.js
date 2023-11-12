@@ -154,9 +154,19 @@ function repeatString(str, times) {
  *   removeFirstOccurrences('I like legends', 'end') => 'I like legs'.
  *   removeFirstOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
-function removeFirstOccurrences(/* str, value */) {
-  throw new Error('Not implemented');
-}
+
+/* prettier-ignore */
+function removeFirstOccurrences(str, value) {
+  // throw new Error('Not implemented');
+  let ans
+  if (!(str.includes(value))) {
+    ans = str
+  } else {
+    ans = str.slice(0, str.indexOf(value)) +
+      str.slice(str.indexOf(value) + value.length);
+    }
+  return ans
+  }
 
 /**
  * Remove the last occurrence of a substring from a string.
