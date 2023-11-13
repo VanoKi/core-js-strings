@@ -38,9 +38,10 @@ function getStringLength(value) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-function isString(/* value */) {
-  throw new Error('Not implemented');
-  // return (typeof value === 'string' || (typeof value === 'object' && value instanceof String));
+/* prettier-ignore */
+function isString(value) {
+  // throw new Error('Not implemented');
+  return (typeof value === 'string' || (typeof value === 'object' && value instanceof String));
 }
 
 /**
@@ -205,8 +206,14 @@ function removeLastOccurrences(str, value) {
  *   sumOfCodes('') => 0
  *   sumOfCodes() => 0
  */
-function sumOfCodes(/* str */) {
-  throw new Error('Not implemented');
+/* prettier-ignore */
+function sumOfCodes(str) {
+  // throw new Error('Not implemented');
+  let ans = 0
+  if (typeof str === 'string') {
+    ans = str.split('').reduce((sum, e) => sum + e.charCodeAt(), 0)
+  }
+  return ans
 }
 
 /**
