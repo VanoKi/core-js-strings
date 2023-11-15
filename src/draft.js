@@ -2,10 +2,17 @@
 const ic = require('node-icecream')();
 
 function isPalindrom(str) {
-  // return str.length;
   // eslint-disable-next-line no-plusplus
-  const str2 = str.toLowerCase().replaceAll(/[^a-w]/g, '');
-  return str2 === [...str2].reverse().join('');
+  let max = 0;
+  let ans = '';
+  // eslint-disable-next-line no-restricted-syntax
+  for (const strElement of str.split(' ')) {
+    if (strElement.length > max) {
+      max = strElement.length;
+      ans = strElement;
+    }
+  }
+  return ans;
 }
 
-ic(isPalindrom('A man, a plan, a canal, Panama!'));
+ic(isPalindrom('The quick brown fox'));
