@@ -2,17 +2,12 @@
 const ic = require('node-icecream')();
 
 function isPalindrom(str) {
-  // eslint-disable-next-line no-plusplus
-  let max = 0;
-  let ans = '';
-  // eslint-disable-next-line no-restricted-syntax
-  for (const strElement of str.split(' ')) {
-    if (strElement.length > max) {
-      max = strElement.length;
-      ans = strElement;
-    }
-  }
-  return ans;
+  return str.split(' ').forEach((e) => [...e].reverse().join(''));
 }
 
 ic(isPalindrom('The quick brown fox'));
+
+const str = 'The Quick Brown Fox';
+const ans = [];
+str.split(' ').forEach((e) => ans.push([...e].reverse().join('')));
+ic(ans.join(' '));
