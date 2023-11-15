@@ -1,13 +1,23 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const ic = require('node-icecream')();
 
-function isPalindrom(str) {
-  return str.split(' ').forEach((e) => [...e].reverse().join(''));
+function invertCase(str) {
+  // throw new Error('Not implemented');
+  let ans = '';
+  // eslint-disable-next-line no-restricted-syntax
+  for (const world of str.split(' ')) {
+    let newWorld = '';
+    // eslint-disable-next-line no-restricted-syntax
+    for (const char of world) {
+      if (char === char.toUpperCase()) {
+        newWorld += char.toLowerCase();
+      } else {
+        newWorld += char.toUpperCase();
+      }
+    }
+    ans += ` ${newWorld}`;
+  }
+  return ans.trim();
 }
 
-ic(isPalindrom('The quick brown fox'));
-
-const str = 'The Quick Brown Fox';
-const ans = [];
-str.split(' ').forEach((e) => ans.push([...e].reverse().join('')));
-ic(ans.join(' '));
+ic(invertCase('Hello, World!'));
