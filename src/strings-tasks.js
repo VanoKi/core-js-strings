@@ -261,8 +261,11 @@ function endsWith(str, substr) {
  *   formatTime(0, 45) => "00:45"
  *   formatTime(0, 0) => "00:00"
  */
-function formatTime(/* minutes, seconds */) {
+/* prettier-ignore */
+function formatTime(/* hourse, minutes */) {
   throw new Error('Not implemented');
+  // return `${hourse < 10 ? '0' : ''}${hourse}:${minutes < 10 ? '0' : ''}${minutes}`
+
 }
 
 /**
@@ -275,8 +278,9 @@ function formatTime(/* minutes, seconds */) {
  *   reverseString('abcdef') => 'fedcba'
  *   reverseString('12345') => '54321'
  */
-function reverseString(/* str */) {
-  throw new Error('Not implemented');
+function reverseString(str) {
+  // throw new Error('Not implemented');
+  return str.split('').reverse().join('');
 }
 
 /**
