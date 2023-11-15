@@ -1,23 +1,9 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const ic = require('node-icecream')();
 
-function invertCase(str) {
+function extractNameFromTemplate(value) {
   // throw new Error('Not implemented');
-  let ans = '';
-  // eslint-disable-next-line no-restricted-syntax
-  for (const world of str.split(' ')) {
-    let newWorld = '';
-    // eslint-disable-next-line no-restricted-syntax
-    for (const char of world) {
-      if (char === char.toUpperCase()) {
-        newWorld += char.toLowerCase();
-      } else {
-        newWorld += char.toUpperCase();
-      }
-    }
-    ans += ` ${newWorld}`;
-  }
-  return ans.trim();
+  // return value.slice(7);
+  return value.slice(7, value.length - 1);
 }
-
-ic(invertCase('Hello, World!'));
+ic(extractNameFromTemplate('Hello, World!'));
