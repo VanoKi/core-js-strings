@@ -1,9 +1,11 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const ic = require('node-icecream')();
 
-function extractNameFromTemplate(value) {
-  // throw new Error('Not implemented');
-  // return value.slice(7);
-  return value.slice(7, value.length - 1);
+function formatTime(minutes, seconds) {
+  // return `${hourse < 10 ? '0' : ''}${hourse}:${minutes < 10 ? '0' : ''}${minutes}`
+  return `${minutes.toString().padStart(2, 0)}:${seconds
+    .toString()
+    .padStart(2, 0)}`;
 }
-ic(extractNameFromTemplate('Hello, World!'));
+
+ic(formatTime(5, 30));

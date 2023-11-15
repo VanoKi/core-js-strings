@@ -262,10 +262,9 @@ function endsWith(str, substr) {
  *   formatTime(0, 0) => "00:00"
  */
 /* prettier-ignore */
-function formatTime(/* hourse, minutes */) {
-  throw new Error('Not implemented');
-  // return `${hourse < 10 ? '0' : ''}${hourse}:${minutes < 10 ? '0' : ''}${minutes}`
-
+function formatTime(minutes, seconds) {
+  // throw new Error('Not implemented');
+  return `${minutes.toString().padStart(2, 0)}:${seconds.toString().padStart(2,0)}`;
 }
 
 /**
