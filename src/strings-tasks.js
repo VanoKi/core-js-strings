@@ -85,7 +85,6 @@ function getFirstChar(value) {
  *   removeLeadingAndTrailingWhitespaces('\t\t\tHello, World! ') => 'Hello, World!'
  */
 function removeLeadingAndTrailingWhitespaces(value) {
-  // throw new Error('Not implemented');
   return value.trim();
 }
 
@@ -101,7 +100,6 @@ function removeLeadingAndTrailingWhitespaces(value) {
  *   removeLeadingWhitespaces('\t\t\tHello, World! ') => 'Hello, World! '
  */
 function removeLeadingWhitespaces(value) {
-  // throw new Error('Not implemented');
   return value.trimStart();
 }
 
@@ -117,7 +115,6 @@ function removeLeadingWhitespaces(value) {
  *   removeTrailingWhitespaces('\t\t\tHello, World! ') => '\t\t\tHello, World!'
  */
 function removeTrailingWhitespaces(value) {
-  // throw new Error('Not implemented');
   return value.trimEnd();
 }
 
@@ -135,7 +132,6 @@ function removeTrailingWhitespaces(value) {
  *   repeatString('abc', -2) => ''
  */
 function repeatString(str, times) {
-  // throw new Error('Not implemented');
   return times > 0 ? str.repeat(times) : '';
 }
 
@@ -299,7 +295,6 @@ function orderAlphabetically(str) {
  *   containsSubstring('12345', '34') => true
  */
 function containsSubstring(str, substring) {
-  // throw new Error('Not implemented');
   return str.includes(substring);
 }
 
