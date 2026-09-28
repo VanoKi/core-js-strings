@@ -319,11 +319,7 @@ function containsSubstring(str, substring) {
  */
 function countVowels(str) {
   const vovels = ['a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'];
-  let count = 0;
-  for (const strElement of str) {
-    if (vovels.includes(strElement)) count += 1;
-  }
-  return count;
+  return Array.from(str).filter((e) => vovels.includes(e)).length;
 }
 
 /**
@@ -331,7 +327,7 @@ function countVowels(str) {
  * https://en.wikipedia.org/wiki/Palindrome
  *
  * @param {string} str - The input string.
- * @return {bool} - True if the string is a palindrome, false otherwise.
+ * @return {boolean} - True if the string is a palindrome, false otherwise.
  *
  * @example:
  *   isPalindrome('madam') => true
@@ -463,7 +459,7 @@ function unbracketTag(str) {
  * Extracts e-mails from single string with e-mails list delimited by semicolons
  *
  * @param {string} str - The input string.
- * @return {array} - The list of e-mails extracted from the string.
+ * @return {string[]} - The list of e-mails extracted from the string.
  *
  * @example
  *   'angus.young@gmail.com;brian.johnson@hotmail.com;bon.scott@yahoo.com'
