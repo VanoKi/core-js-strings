@@ -389,20 +389,11 @@ function reverseWords(str) {
  *   invertCase('12345') => '12345'
  */
 function invertCase(str) {
-  let ans = '';
-  for (const world of str.split(' ')) {
-    let newWorld = '';
-    // eslint-disable-next-line no-restricted-syntax
-    for (const char of world) {
-      if (char === char.toUpperCase()) {
-        newWorld += char.toLowerCase();
-      } else {
-        newWorld += char.toUpperCase();
-      }
-    }
-    ans += ` ${newWorld}`;
-  }
-  return ans.trim();
+  return Array.from(str)
+    .map((char) =>
+      char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()
+    )
+    .join('');
 }
 
 /**
